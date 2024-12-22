@@ -1,0 +1,1914 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+
+/* Header Section*/
+header {
+    background-color: #E2D1CA;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 800;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
+    padding: 15px 15px;
+    box-sizing: border-box;
+    height: 100px; /* Set a fixed height */
+    color: #9A785F;
+
+
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300%;
+    max-width: 1400px; 
+    color: #9A785F;
+
+}
+
+.header-word {
+    top: 20;
+        color: #9A785F;
+
+}
+
+.header-container h1 {
+        color: #3D2722;
+
+}
+
+
+
+/* Navigation */
+
+.first1 {
+  text-decoration: none;
+  color: inherit;
+  align-items: flex-start;
+  line-height: 1.5;
+  background-color: #9A785F; /* Light brown background color */
+  display: inline;
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Arial Black', serif;
+
+  
+   
+}
+
+.navigation {
+    display: flex;
+    background-color: #9A785F; /* Light brown background color */
+    border-radius: 50px; /* Rounded corners for the navigation bar */
+    padding: 1rem 15rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.navigation a {
+    flex: 2;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    height: 100px; /* Set a fixed height */
+
+
+}
+
+
+
+
+/*HEADER END*/
+
+
+
+
+
+
+/*LOGIN SECTION*/
+
+.bglogin {
+        background: url("C:/Users/chris/OneDrive/Desktop/ITwebsite/pictures/Coffee_background.jpg") center/cover no-repeat fixed; 
+
+}
+
+body1 {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("C:/Users/chris/OneDrive/Desktop/ITwebsite/picture s/Coffee_background.jpg") center/cover no-repeat fixed; 
+}
+
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+}
+
+.login-box h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #3D2722;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: #dfd5ce;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(61, 39, 34, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    color: #5e3a2e;
+    text-decoration: underline;
+    font-size: 12px;
+    display: inline;
+}
+
+button {
+    background-color: #3D2722;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 32px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2D1D19;
+}
+
+.signup-link {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.signup-link a {
+    color: #3D2722;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Social login box */
+.social-login-box {
+    flex: 1;
+    min-width: 150px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.social-login-box p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5e3a2e;
+    margin-bottom: 5px;
+}
+
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-login button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #b8947e;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.10s;
+    margin-top: 10px;
+
+     margin-bottom: 0.5px;
+}
+
+.social-login button:hover {
+    transform: scale(1.1);
+}
+
+.social-login button img {
+    width: 40px; 
+    height: 40px;
+    margin-bottom: 10PX;
+}
+
+
+@media (max-width: 768px) {
+    .login-box h2 {
+        font-size: 64px;
+        line-height: 100px;
+    }
+
+    .login-box button {
+        width: 50%; 
+    }
+
+    .social-login {
+        gap: 5px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box h2 {
+        font-size: 48px; 
+        line-height: 80px;
+    }
+
+    .social-login-box {
+        margin-top: 20px;
+        border-radius: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box h2 {
+        font-size: 48px; 
+        line-height: 80px;
+    }
+
+    .social-login-box {
+        margin-top: 20px;
+        border-radius: 100px;
+    }
+}
+
+/*LOGIN SECTION END*/
+
+
+
+
+/* HOME SECTION */
+/* About Us Section */
+#about {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  background-image: url('C:/Users/User/OneDrive/Desktop/HTML/pictures/Back1.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about h2 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+#about p {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+
+/* About Images Section */
+.about-images {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.about-image {
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.image-desc {
+  text-align: center;
+  flex: 1;
+}
+
+/* Description Styling */
+.description {
+  display: block;
+  margin-top: 1rem;
+  font-size: 16px;
+  color: #555;
+  max-height: 4.8rem;  /* Control height when collapsed */
+  overflow: hidden;  /* Hide extra text when collapsed */
+  transition: max-height 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Read More Button */
+.read-more-btn {
+  display: inline-block;
+  background-color: #9A785F;
+  color: #ffffff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Arial Black', serif;
+  font-size: 14px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* Hide additional text initially */
+.more-text {
+  display: none;
+}
+
+/* Show additional text and expand description when the class .expanded is added */
+.image-desc.expanded .description {
+  max-height: 1000px; /* Allow description to expand */
+}
+
+.image-desc.expanded .more-text {
+  display: inline; /* Show the additional text */
+}
+
+
+
+/* Technology and Comfort Section */
+.technology-comfort {
+  background-color: #4a3e3b;
+  color: #ffffff;
+  padding: 12rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-image: url('C:/Users/User/OneDrive/Desktop/HTML/pictures/Back1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Left content section */
+.content-wrapper1 {
+  max-width: 400px;
+  margin-left: 5%;
+  text-align: left;
+  margin-bottom: 500px;
+}
+
+.content-wrapper1 h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: 'Arial Black', serif;
+  color: #E2D1CA;
+}
+
+.content-wrapper1 p {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-align: justify;
+}
+
+.button {
+  background-color: #9A785F;
+  color: #ffffff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Arial Black', serif;
+}
+
+/* Right coffee images */
+.coffe {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  top: 5%;
+  right: 10%;
+}
+
+.coffe1 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  bottom: 5%;
+  left: 10%;
+  top: 52%;
+}
+
+/* Right content section */
+.content-wrapper2 {
+  max-width: 400px;
+  margin-right: 5%;
+  text-align: left;
+  margin-top: 600px;
+}
+
+.content-wrapper2 h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'Arial Black', serif;
+  color: #E2D1CA;
+}
+
+.content-wrapper2 p {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: justify;
+}
+
+/* HOME END */
+
+
+
+/*MENU SECTION*/
+
+#main22 {
+    background-image: url('C:/Users/chris/OneDrive/Desktop/HTML/pictures/Back2.jpg'); /* Replace with your image path */
+    background-size: cover; /* Scales the image to cover the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    padding: 40px 0; /* Adds spacing above and below */
+    gap: 40px;
+}
+
+
+
+
+nav {
+    background-color: #f2e6d9;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px 0;
+    background-color: #FFFFFF;
+}
+
+nav li {
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.popular-products{
+    margin-top: 20px;
+}
+
+.popular-products, .fresh-pastries {
+    margin-bottom: 30px;
+    font-family: 'Arial Black', serif;
+
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #3D2722;
+    margin: 0 20px;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Arial Black', serif;
+
+}
+/* Categories Section */
+
+/* Categories Section */
+.categories-container {
+    display: flex;
+    justify-content: center;  /* Centers the category buttons */
+    align-items: flex-start;  /* Aligns the buttons at the top */
+    width: 100%;  /* Ensures it takes full width */
+    background-color: transparent;  /* Keeps the background transparent */
+    margin-top: 20px;  /* Adds space between the Coffee section title and the categories */
+    margin-bottom: 70px;  /* Adds space below the categories */
+}
+
+
+
+.categories {
+    display: flex;
+    gap: 40px;
+}
+
+.category-btn {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #9A785F;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.category-btn:hover {
+    background-color: #CDA182;
+}
+/* Product Card Styling */
+
+.save-label {
+    max-width: 100%;
+
+    .check-button{
+    align-items: normal;
+    }
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+        margin: 0 20px; /* Adds 20px space on the left and right sides */
+
+}
+
+.popular-products-container {
+    padding: 0 30px; /* Adds 20px space on the left and right sides */
+}
+
+
+.product-card {
+    background-color: #E2D1CA;
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.product-card img {
+    width: 80%;
+    border-radius: 8px;
+
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-description {
+    font-family: 'calibri', serif;
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.price-and-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10x;
+    margin-bottom: 20px;
+}
+.price-and-button button{
+    padding:10 50px;
+}
+
+.price {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #8b4513;
+}
+
+.order-button {
+    background-color: #9A785F;
+    color: white;
+    padding: 80px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    text-decoration: none;
+    font-family: 'Arial Black', serif;
+
+}
+
+.banner {
+    margin-top: 50px;
+    padding: 0 19px;
+}
+
+.banner-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#payment-process {
+    text-align: center;
+    background-color: #3D2722;
+    box-sizing: border-box; /* Ensures padding doesn’t increase total width */
+    padding: 40px; /* Adds padding for inner spacing */
+    margin-top: 0px;
+
+    .process-label{
+    color: #fff;
+    }
+
+}
+
+.stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px; /* Adds gaps between steps */
+
+
+}
+
+.step {
+    position: relative; /* Needed for positioning the connecting line */
+    margin: 0 10px;
+    font-size: 30px;
+    padding: 10px;
+    background-color: #E2D1CA;
+    border-radius: 50%;
+    color: #3D2722;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Arial Black', serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -60px; /* Increased gap between line and step */
+    width: 70px;
+    height: 4px;
+    background-color: #E2D1CA; /* Match the background color of the steps */
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+
+
+.payment-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+
+.payment-left, .payment-right {
+    background-color: #E1D0C9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px; 
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+
+}
+
+.payment-left {
+    width: 60%;
+}
+
+.payment-right {
+    width: 35%;
+    height: 15%;
+}
+
+/* Payment Options */
+.payment-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF; 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 120px; 
+    height: 80px; 
+    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.5); 
+    margin: 10px; 
+}
+
+.payment-option img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px; 
+}
+
+.payment-option span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; 
+}
+
+/* Form */
+.payment-info {
+    margin-top: 20px;
+    background-color: #E1D0C9; /* Beige-like background for form section */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Input Fields */
+.payment-info input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #fff; /* Lighter border color or remove if not needed */
+    border-radius: 8px;
+    background-color: #FFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    color: #3D3D3D;
+    font-family: 'Arial', sans-serif;
+}
+    
+
+
+.payment-info input:focus {
+    border-color: #AA5E39; /* Set a border color for focus */
+    outline: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.payment-info input::placeholder {
+    color: #B0A9A5;
+    font-style: italic;
+}
+
+/* Labels */
+.payment-info label {
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 5px; /* Reduced space between label and input */
+    display: block;
+    text-align: left;
+}
+
+/* Row Layout for Flex Elements */
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Reduced gap for closer alignment */
+    margin-bottom: 10px; /* Reduced space between rows */
+}
+
+.flex-row div {
+    width: 48%;
+}
+
+/* Additional Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .flex-row {
+        flex-direction: column;
+    }
+
+    .flex-row div {
+        width: 100%;
+    }
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns checkbox and label to the left */
+    margin-top: 10px;
+    margin-left: 20px;
+
+}
+
+/* Checkbox Styling */
+.checkbox-row input[type="checkbox"] {
+    accent-color: #AA5E39; /* Custom color for checkbox */
+    width: 20px; /* Adjust size for better visibility */
+    height: 20px;
+    margin-right: 10px; /* Space between checkbox and label */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff; /* Lighter border color or remove if not needed */
+
+}
+
+/* Label for Checkbox */
+.save-label {
+    font-size: 15px;
+    font-weight: normal;
+    color: #000000; /* Complementary text color */
+    font-weight: bold;
+}
+
+
+/* Coupon Box */
+.coupon-box {
+    margin-bottom: 20px;
+    
+}
+
+.coupon-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.coupon-box a {
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.checkout-button {
+    background-color: #9A785F;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+
+}
+
+.checkout-button:hover {
+    background-color: #9A785F;
+}
+
+
+/*MENU END*/
+
+
+
+
+
+
+
+/*SERVICES SECTION*/
+/* Services Section Styles */
+.services-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('C:/Users/chris/OneDrive/Desktop/HTML/pictures/Back1.png') no-repeat center center/cover;
+    position: relative;
+}
+
+.services-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.services-section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    color: #333;
+    margin-left: 80px;
+
+}
+
+.services-section p {
+    font-family: 'Arial', serif;
+    color: #333;
+}
+
+.services-container {
+    max-width: 90%;
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    background-color: #E2D1CA; /* Beige color for container */
+    padding: 50px 100px; /* Added padding for right shift */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 40px;
+    align-items: center;
+    margin-left: auto; /* Centers the container horizontally */
+    margin-right: auto; /* Centers the container horizontally */
+
+}
+
+.services-column {
+    width: 50%;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 40px; /* Space between icon and text */
+}
+
+.service-item img {
+    width: 90px; /* Icon size */
+    height: 90px;
+}
+
+.service-item span {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Arial Black', serif;
+}
+
+
+
+
+/* Banner */
+.service-banner {
+    padding: 0 18px;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.service-banner img {
+
+  border-radius: 20px;
+  max-width: 1450px;
+}
+
+/* General Contact Section Styling */
+/* General Styling */
+.contact-section {
+  background-color: #9A785F;
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+   margin-bottom: 40px; /* Adjust this value for vertical spacing */
+}
+
+.contact-title h2{
+    margin-top: 50px;
+    background-color: none;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contact-title p {
+color: #000;
+background-color: none;
+font-size: 24px;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  background-color: #9A785F;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+/* Get In Touch Section */
+.get-in-touch {
+  width: 45%;
+  background-color: #9A785F;
+  padding: 20px;
+  border-radius: 8px;
+  color: black;
+  margin-left: 40px;
+}
+
+.get-in-touch h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column; /* Stacks heading and paragraph vertically */
+}
+
+.contact-text h5 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  font-family: 'Arial Black', serif;
+}
+
+.contact-text p {
+  margin: 5px 0 0; /* Adjusts space between heading and text */
+  color: #ddd;
+  font-size: 1em;
+}
+
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 30px;
+}
+
+.contact-detail img {
+  width: 90px;
+  margin-right: 15px;
+}
+
+
+.social-media-container {
+  margin-top: 20px; /* Adds some space above the container */
+}
+
+.social-line {
+  border: none;
+  border-top: 3px solid white; /* Creates a white line */
+  width: 410px; /* Ensures the line spans across the container */
+  margin-bottom: 30px; /* Space between line and text */
+}
+
+.social-media-note {
+  font-size: 0.9em;
+  color: white;
+  text-align: left;
+}
+
+
+/* Message Form */
+.message-form {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  color: black;
+  margin-left: 650px;
+  margin-top: -410px;
+  margin-bottom: 90px;
+
+}
+
+.message-form h2 {
+  font-weight: bold;
+  color: #333;
+  font-size: 2em;
+}
+
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.message-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.message-form .message-note {
+  font-size: 0.9em;
+  color: #555;
+  margin: 10px 0;
+}
+
+.message-form input, textarea{
+    font-family: 'Calibri', serif;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.message-form button {
+  background-color: #9A785F;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: 'Arial Black', serif;
+  margin-left: 410px;
+  margin-top: 20px;
+}
+
+/* Map Section */
+.map-section {
+background-color: #9A785F;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.map-section img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/*SERVICES END*/
+
+
+
+
+
+
+
+
+/*ABOUT SECTION*/
+
+
+
+/* About Us Page */
+.about-section {
+  position: relative;
+  background: url('C:/Users/chris/OneDrive/Desktop/HTML/ABOUT US HTML/pictures/coffee-beans.png') no-repeat center center / cover;
+  color: white;
+  height: 500px; /* Adjust height as needed */
+  display: flex;
+  align-items: flex-start; /* Align content closer to the top */
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px; /* Adds space from the top */
+  text-decoration: none;
+  color: inherit;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with lower opacity */
+  z-index: 1;
+}
+
+.about-banner {
+  position: relative;
+  z-index: 2; /* Ensures text is above the overlay */
+  max-width: 800px;
+}
+
+.about-banner h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Arial Black', serif;
+}
+
+.about-banner p {
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: #fff;
+}
+
+
+/* We Are IT Cafe Section */
+
+
+.we-are-section {
+  background-color: #f5ebe1; /* Light beige background for the section */
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.we-are-container {
+  display: flex;
+  max-width: 1000px; /* Limit the max width of the container */
+  background-color: #ffffff; /* White background for the container */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 0px; /* Rounded corners */
+  overflow: hidden;
+}
+
+.we-are-text {
+  flex: 1;
+  padding: 40px;
+  text-align: left;
+  color: #333;
+}
+
+.we-are-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.we-are-text p {
+  font-size: 25px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.we-are-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.we-are-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%); /* Makes the image black and white */
+}
+
+
+/* Team Section */
+.team-section {
+  width: 100%;
+  background-color: #f4ece6; /* Light beige for team section */
+  text-align: center;
+  padding: 50px 20px;
+  gap: 303px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px; /* Adds a gap between the heading and team members */
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.team-section a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background-color: white;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 350px;
+    text-decoration: none;
+  color: inherit;
+ }
+
+.team-member img {
+  width: 250px;
+  height: 250px;
+  border-radius: 0%;
+  margin-bottom: 10px;
+  text-align: center;
+  box-shadow: 0 5 px 10px rgba(0, 0, 0, 1.2);
+  border-color: #000;
+}
+
+/*ABOUT END*/
+
+
+
+
+
+
+
+/*FOOTER SECTION*/
+.footer {
+  background-color: #d2b49a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  background-color: #d2b49a;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-nav a {
+  color: #3c2f2f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  background-size: cover;
+  background-image: url('C:/Users/chris/OneDrive/Desktop/HTML/pictures/footer-bg.png'); /* Add your image path here */
+  opacity: 4;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+.footer-tagline {
+  margin-bottom: 5px; /* Adjust spacing between sections */
+}
+
+.footer-tagline p,
+.footer-copyright p {
+  margin: 0;
+  color: #fff;
+}
+
+.footersection2 {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*FOOTER END*/
+
+
+
+/* SIGN UP SECTION */
+body1 {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("C:/Users/chris/OneDrive/Desktop/ITwebsite/picture s/Coffee_background.jpg") center/cover no-repeat fixed; 
+}
+
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* Logo container styling */
+.logo-container {
+    position: absolute;
+    top: 20px; 
+    left: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo {
+    width: 75px; 
+    height: auto;
+    margin-right: 20px;
+}
+
+.logo-text {
+    font-size: 24px; 
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Adjust the login-box */
+.login-box {
+    flex: 1;
+    min-width: 400px; 
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.login-box .login-logo {
+    width: 350px; 
+    height: auto;
+    position: absolute; 
+    top: 175px;
+    left: 200px;
+    line-height: 200px;
+    color: #3D2722; 
+}
+
+
+/
+label[for="username"], label[for="password"] {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #3D2722;
+    font-weight: bold;
+    left: 200px;
+}
+
+.login-box input {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 35px; 
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #dfd5ce;
+}
+
+.password-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-options a {
+    font-size: 12px;
+    color: #5e3a2e;
+    text-decoration: none;
+    float: left;
+    margin-left: 450px; 
+    position: relative;
+    line-height: 10vh;
+}
+
+.signin-link {
+    text-align: left;
+    margin: 1.5rem 0;
+}
+
+.signin-link a {
+    color: #3D2722;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 25%;
+    padding: 12px 0;
+    margin-left: 375px;
+    background-color: #3D2722;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #5e3a2e;
+}
+
+/* Make the form responsive */
+@media (max-width: 480px) {
+    .login-box {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    button[type="submit"] {
+        width: 50%;
+    }
+}
+
+/* Social login box */
+.social-login-box {
+    flex: 1;
+    min-width: 150px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.social-login-box p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5e3a2e;
+    margin-bottom: 5px;
+}
+
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-login button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #b8947e;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.10s;
+    margin-top: 10px;
+
+     margin-bottom: 0.5px;
+}
+
+.social-login button:hover {
+    transform: scale(1.1);
+}
+
+.social-login button img {
+    width: 40px; 
+    height: 40px;
+    margin-bottom: 10PX;
+}
+
+
+@media (max-width: 768px) {
+    .login-box h2 {
+        font-size: 64px;
+        line-height: 100px;
+    }
+
+    .login-box button {
+        width: 50%; 
+    }
+
+    .social-login {
+        gap: 5px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box h2 {
+        font-size: 48px; 
+        line-height: 80px;
+    }
+
+    .social-login-box {
+        margin-top: 20px;
+        border-radius: 100px;
+    }
+}
+
+/*SIGN UP SECTION END*/ 
+
+
+
+/* Popup Menu Styling */
+.popup-menu {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position to stay in place during scrolling */
+  top: 100px; /* Adjust based on header height */
+  right: 10px; /* Position near the menu icon */
+  background-color: #9A785F;
+  padding: 10px;
+  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  z-index: 1000;
+}
+
+/* Close Button Styling */
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Popup Menu List */
+.popup-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popup-menu li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.popup-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+    font-weight: bold;
+  font-family: 'Arial Black', serif;
+}
+
+.popup-menu a:hover {
+  text-decoration: underline;
+}
+
+
+/* Welcome SECTION */
+/* About Us Section */
+#about1 {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  background-image: url('C:/Users/chris/OneDrive/Desktop/HTML/pictures/Back1.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero section styles */
+.hero {
+    min-height: calc(50vh - 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 25c-13.807 0-25 11.193-25 25s11.193 25 25 25 25-11.193 25-25-11.193-25-25-25zm0 45c-11.046 0-20-8.954-20-20s8.954-20 20-20 20 8.954 20 20-8.954 20-20 20z' fill='%23a88671' fill-opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #6b4c3c, #a88671);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.features {
+    margin: 1rem 0;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.feature-item i {
+    color: #8d6e5d;
+}
+
+.cta-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #8d6e5d;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 120px;
+}
+
+.btn:hover {
+    background-color: #6b4c3c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        padding: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Cafe</title>
+    <link rel="stylesheet" href="DESIGNS.css">
+<style>
+        /* Simple pagination styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            margin: 0 5px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            text-decoration: none;
+            color: #000;
+        }
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            width: 22%;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+    <div class="header-container">
+      <div class="logo-section">
+        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\header-logo.png" alt="IT Cafe Logo" class="logo-icon">
+        <h1 class="logo-text">IT CAFE</h1>
+      </div>
+      <nav class="navigation">
+        <a href="Home.html" class="first1">Home</a>
+        <a href="aboutus.html" class="first1">About Us</a>
+        <a href="menu.html" class="first1">Menu</a>
+        <a href="services.html" class="first1">Services</a>
+        <a href="services.html#contact" class="first1">Contact</a>
+      </nav>
+      <!-- Cart and Profile Icons Section -->
+            <div class="icon-section">
+                <a href="#" class="icon-link cart-icon">
+                    <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\cart-icon.png" alt="Cart" class="icon">
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#" class="icon-link profile-icon">
+                    <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\profile-avatar.png" alt="Profile" class="icon">
+                </a>
+            </div>
+    </div>
+  </header>
+ 
+
+    <main>
+    <div id="main22">
+        <section class="popular-products-container">
+            <section class="popular-products">
+                
+                <!-- Categories section placed before the product grid -->
+                <div class="categories-container">
+                    <div class="categories">
+                        <a href="menu.html" class="category-btn">Coffee</a>
+                        <a href="Pastries.html" class="category-btn">Pastries</a>
+                        <a href="combo.html" class="category-btn">Combo</a>
+                    </div>
+                </div>
+                 <h2>Coffee Selection</h2>
+                
+                <div class="product-grid" id="productGrid">
+                    <!-- Product cards will be inserted here by JavaScript -->
+                </div>
+                
+                <!-- Pagination controls -->
+                <div class="pagination" id="paginationControls"></div>
+            </section>
+        </section>
+    </div>
+</main>
+
+<script>
+    // Sample product data
+    const products = [
+      { name: "Cinnamon Roll", description: "Soft rolls with a sweet cinnamon swirl and cream cheese icing.", price: "P99", image: "cinnamon.png" },
+    { name: "Croissant", description: "Buttery, flaky croissant baked to golden with a light, airy texture.", price: "P99", image: "croissant.png" },
+    { name: "Muffin", description: "Moist, fluffy muffin bursting with flavor, perfect for any time of day.", price: "P90", image: "muffin.png" },
+    { name: "Scones", description: "Traditional scones served with clotted cream and jam.", price: "P99", image: "scones.png" },
+    { name: "Chocolate Lava Cake", description: "Warm chocolate cake with a gooey, molten center.", price: "P150", image: "lava-cake.png" },
+    { name: "Macarons", description: "Delicate French cookies with a variety of filling flavors.", price: "P120", image: "macarons.png" },
+    { name: "Cheesecake", description: "Creamy cheesecake with a buttery graham crust.", price: "P130", image: "cheesecake.png" },
+    { name: "Tiramisu", description: "Layered coffee-flavored dessert with mascarpone cheese and cocoa.", price: "P150", image: "tiramisu.png" },
+    { name: "Fruit Tart", description: "Buttery tart shell filled with creamy custard and topped with fresh fruit.", price: "P120", image: "fruit-tart.png" },
+
+     { name: "Eclairs", description: "Choux pastry filled with vanilla cream and topped with chocolate glaze.", price: "P140", image: "eclair.png" },
+    { name: "Red Velvet Cake", description: "Soft, moist red velvet cake with cream cheese frosting.", price: "P160", image: "red-velvet-cake.png" },
+    { name: "Cupcakes", description: "Soft cupcakes available in a variety of flavors.", price: "P120", image: "cupcakes.png" },
+    { name: "Chocolate Chip Cookies", description: "Classic cookies with gooey chocolate chips.", price: "P90", image: "chocolate-chip-cookies.png" },
+    { name: "Banoffee Pie", description: "A layered pie made with bananas, toffee, and whipped cream.", price: "P150", image: "banoffee-pie.png" },
+    { name: "Peach Cobbler", description: "Warm peach cobbler served with a scoop of ice cream.", price: "P140", image: "peach-cobbler.png" },
+    { name: "Pistachio Baklava", description: "Flaky pastry layered with pistachio nuts and honey syrup.", price: "P135", image: "pistachio-baklava.png" },
+    { name: "Sticky Toffee Pudding", description: "Moist sponge cake with a rich toffee sauce.", price: "P145", image: "sticky-toffee-pudding.png" },
+    { name: "Lemon Meringue Pie", description: "Tangy lemon curd topped with fluffy meringue.", price: "P150", image: "lemon-meringue-pie.png" },
+
+     { name: "Carrot Cake", description: "Moist cake with spiced carrots and cream cheese frosting.", price: "P140", image: "carrot-cake.png" },
+    { name: "Apple Pie", description: "Classic apple pie with a buttery, flaky crust.", price: "P130", image: "apple-pie.png" },
+    { name: "Coconut Macaroons", description: "Chewy coconut cookies that are lightly golden on the outside.", price: "P95", image: "coconut-macaroons.png" },
+    { name: "Brownies (Classic & Fudge)", description: "Rich and moist brownies in classic or fudge flavor.", price: "P110", image: "brownies.png" },
+    { name: "Mini Fruit Pies", description: "Mini pies filled with seasonal fruits and a flaky crust.", price: "P110", image: "mini-fruit-pies.png" },
+    { name: "Cheese Danish", description: "Flaky pastry filled with sweet cream cheese.", price: "P105", image: "cheese-danish.png" },
+    { name: "Chocolate Croissant", description: "Flaky croissant filled with rich, melted chocolate.", price: "P120", image: "chocolate-croissant.png" },
+    { name: "Baked Donuts", description: "Light and fluffy baked donuts with a sweet glaze.", price: "P95", image: "baked-donuts.png" },
+    { name: "Raspberry Almond Bars", description: "Shortbread bars topped with raspberry jam and almonds.", price: "P110", image: "raspberry-almond-bars.png" },
+    { name: "Pavlova", description: "Crispy meringue shell topped with whipped cream and fresh fruit.", price: "P160", image: "pavlova.png" },
+    { name: "Churros", description: "Fried dough sticks dusted with cinnamon sugar.", price: "P120", image: "churros.png" },
+    { name: "Mango Float", description: "Filipino dessert with mangoes, cream, and graham crackers.", price: "P140", image: "mango-float.png" },
+    { name: "Strawberry Shortcake", description: "Fluffy cake topped with fresh strawberries and whipped cream.", price: "P150", image: "strawberry-shortcake.png" },
+    { name: "Lemon Bars", description: "Sweet and tangy lemon bars with a buttery crust.", price: "P120", image: "lemon-bars.png" },
+    { name: "Gingerbread Cookies", description: "Spiced cookies shaped like gingerbread men, perfect for the holidays.", price: "P90", image: "gingerbread-cookies.png" },
+    { name: "Almond Joy Cake", description: "Chocolate cake with a coconut-almond filling.", price: "P160", image: "almond-joy-cake.png" },
+    { name: "Apple Cinnamon Muffins", description: "Soft muffins filled with apples and a touch of cinnamon.", price: "P105", image: "apple-cinnamon-muffins.png" },
+    { name: "Peach Melba", description: "Peaches topped with raspberry sauce and vanilla ice cream.", price: "P150", image: "peach-melba.png" },
+    { name: "Choco-Nut Cannoli", description: "Crisp pastry filled with sweet ricotta and chocolate chips.", price: "P140", image: "choco-nut-cannoli.png" },
+    { name: "Berry Clafoutis", description: "Baked French dessert with berries and a custard-like batter.", price: "P150", image: "berry-clafoutis.png" },
+    { name: "Yogurt Parfait", description: "Layered yogurt with fresh fruit and granola.", price: "P135", image: "yogurt-parfait.png" },
+    { name: "Ice Cream Sundae", description: "Vanilla ice cream topped with chocolate, caramel, sprinkles, and whipped cream.", price: "P160", image: "ice-cream-sundae.png" }
+];
+
+    const productsPerPage = 8;
+    let currentPage = 1;
+
+    // Function to render product cards based on current page
+    function renderProducts(page) {
+        const start = (page - 1) * productsPerPage;
+        const end = start + productsPerPage;
+        const productsToShow = products.slice(start, end);
+
+        // Get product grid container and clear previous content
+        const productGrid = document.getElementById("productGrid");
+        productGrid.innerHTML = "";
+
+        // Loop through products and create HTML for each
+        productsToShow.forEach(product => {
+            const productCard = document.createElement("div");
+            productCard.classList.add("product-card");
+            productCard.innerHTML = `
+                <img src="pictures/${product.image}" alt="${product.name}">
+                <div class="product-info">
+                    <h3 class="product-name">${product.name}</h3>
+                    <p class="product-description">${product.description}</p>
+                    <div class="price-and-button">
+                        <span class="price">${product.price}</span>
+                        <button><a href="menu.html#payment-process" class="order-button">Order Now</a></button>
+                    </div>
+                </div>
+            `;
+            productGrid.appendChild(productCard);
+        });
+    }
+
+    // Function to render pagination controls
+    function renderPagination() {
+        const totalPages = Math.ceil(products.length / productsPerPage);
+        const paginationControls = document.getElementById("paginationControls");
+        paginationControls.innerHTML = "";
+
+        // Create page buttons
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement("a");
+            pageButton.href = "javascript:void(0)";
+            pageButton.textContent = i;
+            pageButton.classList.add("page-btn");
+            if (i === currentPage) {
+                pageButton.classList.add("active");
+            }
+            pageButton.addEventListener("click", () => {
+                currentPage = i;
+                renderProducts(currentPage);
+                renderPagination();
+            });
+            paginationControls.appendChild(pageButton);
+        }
+    }
+
+    // Initialize page
+    renderProducts(currentPage);
+    renderPagination();
+</script>
+
+
+         <section id="checkout" class="banner">
+        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\banner.png" alt="Banner Image" class="banner-image">
+    </section>
+            </section>
+</div>
+
+    <section id="payment-process">
+        <h2 class="process-label">Payment Process</h2>
+
+<div id="content-container">
+    <!-- Content for each page will be loaded here -->
+</div>
+
+
+        <!-- Payment Details -->
+        <div class="payment-container">
+            <div class="payment-left">
+                <div class="payment-options">
+                    <div class="payment-option">
+                        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\gcash.png" alt="Gcash">
+                        <span>GCash</span>
+                    </div>
+                    <div class="payment-option">
+                        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\visa.png" alt="Visa">
+                        <span>Visa</span>
+                    </div>
+                    <div class="payment-option">
+                        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\mastercard.png" alt="MasterCard">
+                        <span>MasterCard</span>
+                    </div>
+                    <div class="payment-option">
+                        <img src="C:\Users\User\OneDrive\Desktop\HTML\pictures\paypal.png" alt="PayPal">
+                        <span>PayPal</span>
+                    </div>
+                    <div class="payment-option">
+                        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\google-pay.png" alt="Google Pay">
+                        <span>Google Pay</span>
+                    </div>
+                </div>
+
+               <div class="payment-info">
+                <div>
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" placeholder="Enter card number">
+                </div>
+                <div>
+                    <label for="card-holder">Card Holder Name:</label>
+                    <input type="text" id="card-holder" placeholder="Enter cardholder name">
+                </div>
+                <div class="flex-row">
+                    <div>
+                        <label for="validity-period">Validity Period:</label>
+                        <input type="text" id="validity-period" placeholder="MM/YY">
+                    </div>
+                    <div>
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" placeholder="CVV">
+                    </div>
+                </div>
+            </div>
+
+                    <div class="checkbox-row">
+                        <input class="check-button" type="checkbox" id="save-card" name="save-card">
+                        <label class="save-label" for="save-card">Save info?</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="payment-right">
+                <div class="coupon-box">
+                    <label for="coupon">COUPONS:</label>
+                    <input type="text" id="coupon" name="coupon">
+                    <a href="#">View more coupons</a>
+                </div>
+                <a href="menu.html#main22" 
+                <button class="checkout-button">CHECK OUT</button>
+            </a>
+            </div>
+        </div>
+    </section>
+      </main>
+
+ <!-- Footer Section -->
+   <footer class="footer">
+  <div class="footer-top">
+    <div class="logo-container">
+      <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\header-logo.png" alt="IT Cafe Logo" class="footer-logo">
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61568886770772&mibextid=ZbWKwL" target="_blank">
+        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\facebook-icon.png" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/@ITCAFE-k9b" target="_blank">
+        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\youtube-icon.png" alt="YouTube">
+      </a>
+      <a href="https://www.linkedin.com/in/it-cafe-157328338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\linkedin-icon.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/itcafe_hub/?igsh=MWt1bXJ3N3hsN3Mzaw%3D%3D" target="_blank">
+        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\instagram-icon.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/@itcafe_hub?_t=8rMj2nrASyf&_r=1" target="_blank">
+        <img src="C:\Users\chris\OneDrive\Desktop\HTML\pictures\tiktok-icon.png" alt="Tiktok">
+      </a>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-tagline">
+      <p>BEST COFFEE IN YOUR HOME TOWN</p>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; IT Café | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
